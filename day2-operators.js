@@ -23,7 +23,7 @@ console.log("Division =", number1 / number2)
 //task5
 let c = 54
 let d = 25
-console.log("Reminder =", c % d)
+console.log("Remainder =", c % d)
 
 //Activity 2
 //task6
