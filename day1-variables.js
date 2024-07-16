@@ -24,7 +24,13 @@ console.log(typeof(student))
 let arr = [1,2,3,4,5,6]
 console.log(typeof(arr))
 
-// Activity 4
+//Activity 4
+let name = 5
+console.log(name) 
+name= "Manan"
+console.log(name);
+
+// Activity 5
 const challenge = "30 days JS Challenge!"
 console.log(challenge)
 
