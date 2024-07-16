@@ -93,6 +93,7 @@ let posOrNeg = (number%2 ===0) ? "even" : "odd"
 console.log(posOrNeg)
 
 //Activity 5
+//Task7
 let year = 2025
 if(year%100 === 0){
     if(year%400 === 0){
