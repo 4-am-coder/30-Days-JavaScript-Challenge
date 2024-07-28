@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <div id="paragraph">THIS IS FIRST PARAGRAPH</div>
+    <div style="width: 300px; height: 30px; background-color: greenyellow;" class="background" id="background">Background</div>
+    <ul class="ul-first">
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+        <li>li-4</li>
+        <li>li-5</li>
+    </ul>
+    <div id="toBeDeleted">Delete this div</div>
+    <img style="width: 150px; border:2px solid black" src="./dp.jpeg" alt="">
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repellendus sapiente tempora ex eveniet quis aspernatur, voluptate blanditiis dicta placeat reiciendis nesciunt temporibus ducimus nobis ipsam officiis veritatis! Placeat, nulla?</p>
+    <button id="changePara">Change Para Content</button>
+</body>
+<script>
+    //Activity 1
+    //Task1
+    document.getElementById('paragraph').innerText = "This is editted paragraph.";
+    //Task2
+    document.getElementById("background").style.backgroundColor = "red";
+    //Activity 2
+    //Task3 & Task8
+    const div = document.createElement("div")
+    div.innerText = "Dynamically created div"
+    div.style.backgroundColor= "green"
+    div.style.padding = "5px"
+    div.style.display = "flex"
+    div.style.alignItems ="center"
+    div.style.justifyContent = "center"
+    div.style.color = "white"
+    document.querySelector('body').append(div)
+    //Task4
+    const li = document.createElement("li")
+    li.innerText ="Dynamically created li-6"
+    document.getElementsByClassName('ul-first')[0].append(li)
+
+    //Activity 3
+    //Task5
+    document.getElementById('toBeDeleted').remove()
+    //Task6
+    const removeLi = document.querySelector('li')
+    console.log(removeLi);
+    document.querySelector('ul').removeChild(removeLi)
+    //Activity 4
+    //Task7
+    const img=document.querySelector('img')
+    img.src = "./profile-pic.png"
+    //Task8 
+    // Already done with task 3
+
+    //Activity 5
+    //Task9
+    document.getElementById('changePara').addEventListener('click', ()=>{
+        document.getElementById('para').innerText = "Para Content changed on button click"
+    })
+    //Task10
+    document.querySelector('img').addEventListener('mouseover', ()=>{
+        let img = document.querySelector('img')
+        if(img.style.border === "2px solid black"){
+        img.style.border = "2px solid orangered"
+        } else {
+            img.style.border = "2px solid black"
+        }
+    })
+</script>
+</html>
